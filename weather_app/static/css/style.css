@@ -1,25 +1,30 @@
-/* styles.css */
+/* 
+ * Stylesheet for the weather app
+ */
 
+/* Body styles */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
   }
-  
-  h1 {
+
+/* Heading styles */
+h1 {
     color: #333;
   }
-  
-  form {
+
+/* Form styles */
+form {
     margin-top: 20px;
   }
-  
-  form input[type="text"] {
+
+form input[type="text"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-  
-  form button[type="submit"] {
+
+form button[type="submit"] {
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
@@ -27,31 +32,32 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
-  
-  form button[type="submit"]:hover {
+
+form button[type="submit"]:hover {
     background-color: #555;
   }
-  
-  form p {
+
+form p {
     margin-top: 10px;
   }
-  
-  form p:first-child {
+
+form p:first-child {
     font-weight: bold;
   }
-  
-  .weather-container {
+
+/* Weather container styles */
+.weather-container {
     margin-top: 50px;
   }
-  
-  .weather-container h2 {
+
+.weather-container h2 {
     color: #333;
   }
-  
-  .weather-container p {
+
+.weather-container p {
     margin-top: 10px;
   }
-  
-  .weather-container p:first-child {
+
+.weather-container p:first-child {
     font-weight: bold;
   }
