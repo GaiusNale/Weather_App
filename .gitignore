@@ -1,0 +1,20 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+.pytest_cache/
+.tox/
+
+# Django
+*.sqlite3
+db.sqlite3
+settings.py
+manage.py
+
+# IDEs
+.idea/
+*.iml
+
+# Other
+*.log
+.DS_Store
