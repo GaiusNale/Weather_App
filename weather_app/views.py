@@ -38,9 +38,10 @@
 import requests
 from django.shortcuts import render
 from .forms import WeatherForm
+from .keysus import keysus
 
 def get_weather_data(city):
-    api_key = '419b87c5611ad660453b06003a68f583'  # Replace with your OpenWeatherMap API key
+    api_key = keysus 
     base_url = 'http://api.openweathermap.org/data/2.5/weather'
     params = {'q': city, 'appid': api_key, 'units': 'metric'}
     response = requests.get(base_url, params=params)
