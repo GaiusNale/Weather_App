@@ -6,7 +6,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: grey;
+    background-color: gainsboro;
   }
 
 /* Heading styles */
@@ -27,15 +27,15 @@ form input[type="text"] {
 
 form button[type="submit"] {
     padding: 10px 20px;
-    background-color: #333;
+    background-color: rgb(79, 79, 160);
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
   }
 
 form button[type="submit"]:hover {
-    background-color: #555;
+    background-color: lightblue;
   }
 
 form p {
@@ -65,4 +65,5 @@ form p:first-child {
 .weather-container p:first-child {
     font-weight: bold;
   }
+
 
