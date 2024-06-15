@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-<html>
+<html lang= "en">
 <head>
     <title>Weather App</title>
     <link rel= 'stylesheet' href= '{% static "css/style.css" %}'>
@@ -9,7 +9,7 @@
     <h1>Weather App</h1>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
+        <p>Enter a city name: <input type="text" id="city" name="city" placeholder="Example: London"></p>
         <button type="submit">Search</button>
     </form>
     {% if temperature %}
@@ -25,3 +25,4 @@
     {% endif %}
 </body>
 </html>
+

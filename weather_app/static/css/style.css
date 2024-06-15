@@ -22,7 +22,7 @@ form {
 form input[type="text"] {
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
   }
 
 form button[type="submit"] {
