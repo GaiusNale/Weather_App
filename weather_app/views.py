@@ -33,8 +33,25 @@ def weather(request):
                 wind_speed = weather_data['wind']['speed'] # Get the wind speed from the weather data
                 visibility = weather_data.get('visibility', 'N/A') # Get the visibility from the weather data
                 country = weather_data['sys']['country']
+                
+                # Assign emojis to certain weather conditions
+                emoji = {
+                    "clear sky": "☀️",
+                    "few clouds": "⛅️",
+                    "scattered clouds": "☁️",
+                    "broken clouds": "☁️☁️  ",
+                    "light rain": "🌧️",
+                    "rain": "🌧️",
+                    "thunderstorm": "⛈️",
+                    "snow": "❄️",
+                    "mist": "💦",
+                }
+                
+                # Get the emoji for the weather description
+                description_emoji = emoji.get(description.lower(), "❓")
+
                 context = {'temperature': temperature,
-                            'description': description, 
+                            'description': f"{description} {description_emoji}", 
                             'city': city,
                             'country': country,
                             'humidity': humidity, 
@@ -52,3 +69,4 @@ def weather(request):
 
     # Render the weather.html template with the form
     return render(request, 'weather_app/weather.html', {'form': form})
+

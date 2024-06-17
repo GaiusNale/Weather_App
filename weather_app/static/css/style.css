@@ -6,12 +6,12 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: gainsboro;
+    background-color: rgb(47, 78, 88);
   }
 
 /* Heading styles */
 h1 {
-    color: #333;
+    color: #bcb8b8;
   }
 
 /* Form styles */
@@ -27,7 +27,7 @@ form input[type="text"] {
 
 form button[type="submit"] {
     padding: 10px 20px;
-    background-color: rgb(79, 79, 160);
+    background-color: rgb(109, 107, 107);
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -55,15 +55,17 @@ form p:first-child {
   }
 
 .weather-container h2 {
-    color: #333;
+    color: #e6e4e4;
   }
 
 .weather-container p {
     margin-top: 10px;
+    color: #bcb8b8;
   }
 
 .weather-container p:first-child {
     font-weight: bold;
   }
 
+  
 
