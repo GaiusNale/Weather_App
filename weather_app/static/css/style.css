@@ -11,7 +11,7 @@ body {
 
 /* Heading styles */
 h1 {
-    color: #bcb8b8;
+    color: #a2a2a2;
   }
 
 /* Form styles */
@@ -35,7 +35,7 @@ form button[type="submit"] {
   }
 
 form button[type="submit"]:hover {
-    background-color: lightblue;
+    background-color: rgb(74, 75, 75);
   }
 
 form p {
@@ -49,18 +49,18 @@ form p:first-child {
 /* Weather container styles */
 .weather-container {
     margin-top: 50px;
-    background-color: #111;
+    background-color: #e8e8e8;
     padding: 20px;
     border-radius: 10px;
   }
 
 .weather-container h2 {
-    color: #e6e4e4;
+    color: #bcb8b8;
   }
 
 .weather-container p {
     margin-top: 10px;
-    color: #bcb8b8;
+    color: #666;
   }
 
 .weather-container p:first-child {
