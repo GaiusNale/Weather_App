@@ -9,6 +9,7 @@
             background-image: url("{{ image_url }}");
             background-size: cover;
             background-repeat: no-repeat;
+            background-position: center;
         }
     </style>
     <script>
@@ -32,9 +33,12 @@
     <p style="color: white;">Humidity: {{ humidity }}%</p>
     <p style="color: white;">Wind Speed: {{ wind_speed }} m/s</p>
     <p style="color: white;">Visibility: {{ visibility }}</p>
+
+    <p class= "photo-credit">Photo by {{ photographer }} on Unsplash</p>
     {% elif error_message %}
     <p style="color: white;">{{ error_message|capfirst }}</p>
     {% endif %}
 </body>
 </html>
+
 

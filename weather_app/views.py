@@ -13,11 +13,16 @@ def get_weather_data(city):
 
 def get_unsplash_image(city):
     api_key = "vry3bsJX7pxuEqkuFWfRmfaPL-7-HCKSfG7rPeaSrdk"
-    base_url = "https://api.unsplash.com/photos/random"
-    params = {'query': city, 'client_id': api_key}
+    base_url = "https://api.unsplash.com/search/photos"
+    params = {'query': f"{city} landmark", 'client_id': api_key, 'per_page': 1, 'w': '100', 'h': '100'}
     response = requests.get(base_url, params=params)
     data = response.json()
-    return data['urls']['regular']
+    if data['results']:
+        image_url = data['results'][0]['urls']['regular']
+        photographer = data['results'][0]['user']['name']
+        return image_url, photographer
+    else:
+        return None, None
 
 def weather(request):
     """
@@ -32,7 +37,7 @@ def weather(request):
         if form.is_valid():
             city = form.cleaned_data['city'] # Get the city from the form data
             weather_data = get_weather_data(city) # Get the weather data for the city
-            image_url = get_unsplash_image(city) # Get the image URL for the city
+            image_url, photographer = get_unsplash_image(city) # Get the image URL and photographer name for the city
 
             # If the request to the API was successful
             if weather_data['cod'] == 200:
@@ -66,7 +71,8 @@ def weather(request):
                             'humidity': humidity, 
                             'wind_speed': wind_speed,
                             'visibility': visibility,
-                            'image_url': image_url} # Create the context dictionary
+                            'image_url': image_url,
+                            'photographer': photographer} # Create the context dictionary
             else:
                 context = {'error_message': 'City not found'} # If the city is not found, create an error message
 
