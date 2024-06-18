@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang= "en" style="color: white;">
+<html lang= "en">
 <head>
     <title>Weather App 🌤️</title>
     <link rel= 'stylesheet' href= '{% static "css/style.css" %}'>
+    <style>
+        body {
+            background-image: url("{{ image_url }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
     <script>
         function capitalizeFirstLetter(string) {
             return string.charAt(0).toUpperCase() + string.slice(1);
@@ -30,6 +37,4 @@
     {% endif %}
 </body>
 </html>
-
-
 

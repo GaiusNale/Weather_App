@@ -11,6 +11,14 @@ def get_weather_data(city):
     data = response.json()
     return data
 
+def get_unsplash_image(city):
+    api_key = "vry3bsJX7pxuEqkuFWfRmfaPL-7-HCKSfG7rPeaSrdk"
+    base_url = "https://api.unsplash.com/photos/random"
+    params = {'query': city, 'client_id': api_key}
+    response = requests.get(base_url, params=params)
+    data = response.json()
+    return data['urls']['regular']
+
 def weather(request):
     """
     This function handles the weather request.
@@ -24,6 +32,7 @@ def weather(request):
         if form.is_valid():
             city = form.cleaned_data['city'] # Get the city from the form data
             weather_data = get_weather_data(city) # Get the weather data for the city
+            image_url = get_unsplash_image(city) # Get the image URL for the city
 
             # If the request to the API was successful
             if weather_data['cod'] == 200:
@@ -56,7 +65,8 @@ def weather(request):
                             'country': country,
                             'humidity': humidity, 
                             'wind_speed': wind_speed,
-                            'visibility': visibility} # Create the context dictionary
+                            'visibility': visibility,
+                            'image_url': image_url} # Create the context dictionary
             else:
                 context = {'error_message': 'City not found'} # If the city is not found, create an error message
 
@@ -69,4 +79,5 @@ def weather(request):
 
     # Render the weather.html template with the form
     return render(request, 'weather_app/weather.html', {'form': form})
+
 
