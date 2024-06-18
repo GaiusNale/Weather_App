@@ -71,10 +71,11 @@ form p:first-child {
   }
 
   
+
 .photo-credit {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    color: white;
+    color: rgb(218, 212, 212);
     font-size: 15px;
 }

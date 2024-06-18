@@ -31,7 +31,7 @@
     <p style="color: white;">Wind Speed: {{ wind_speed }} m/s</p>
     <p style="color: white;">Visibility: {{ visibility }}</p>
 
-    <p class= "photo-credit">Photo by {{ photographer }} on Unsplash</p>
+    <a href= "{{ image_url }}" target= "_blank" class= "photo-credit" >Photo by {{ photographer }} on Unsplash</a>
     {% elif error_message %}
     <p style="color: white;">{{ error_message|capfirst }}</p>
     {% endif %}
