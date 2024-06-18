@@ -2,9 +2,10 @@ import requests
 from django.shortcuts import render
 from .forms import WeatherForm
 from .keysus import keysus
+from .keysus import unplash_api_key
 
 def get_weather_data(city):
-    api_key = keysus 
+    api_key = keysus
     base_url = 'http://api.openweathermap.org/data/2.5/weather'
     params = {'q': city, 'appid': api_key, 'units': 'metric'}
     response = requests.get(base_url, params=params)
@@ -12,7 +13,7 @@ def get_weather_data(city):
     return data
 
 def get_unsplash_image(city):
-    api_key = "vry3bsJX7pxuEqkuFWfRmfaPL-7-HCKSfG7rPeaSrdk"
+    api_key = unplash_api_key
     base_url = "https://api.unsplash.com/search/photos"
     params = {'query': f"{city} landmark", 'client_id': api_key, 'per_page': 1, 'w': '100', 'h': '100'}
     response = requests.get(base_url, params=params)
