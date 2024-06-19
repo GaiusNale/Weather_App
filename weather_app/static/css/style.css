@@ -1,0 +1,13 @@
+/* 
+* Styles for the body 
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: rgb(47, 78, 88);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white
+}
+
