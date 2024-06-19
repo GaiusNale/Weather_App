@@ -22,8 +22,8 @@
         <h1>Weather App 🌤️</h1>
         <form method="post">
             {% csrf_token %}
-            <p>Enter a city name: <input type="text" id="city" name="city" placeholder="Example: London" oninput="this.value = capitalizeFirstLetter(this.value)"></p>
-            <button type="submit">Search</button>
+            <input type="text" id="city" name="city" placeholder="Example: London" oninput="this.value = capitalizeFirstLetter(this.value)">
+            <p><button type="submit">Search</button></p>
         </form>
         
         {% if temperature %}

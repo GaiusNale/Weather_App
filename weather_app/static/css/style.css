@@ -4,61 +4,66 @@
 
 /* Body styles */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: rgb(47, 78, 88);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: rgb(47, 78, 88);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+
+/* Container styles */
+.container {
+  margin-top: 20px;
+  text-align: center;
+}
 
 /* Heading styles */
 h1 {
-    color: #a2a2a2;
-  }
+  color: #a2a2a2;
+}
 
 /* Form styles */
 form {
-    margin-top: 20px;
-  }
-
-form input[type="text"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-  }
-
-form button[type="submit"] {
-    padding: 10px 20px;
-    background-color: rgb(109, 107, 107);
-    color: #e30404;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-
-form button[type="submit"]:hover {
-    background-color: rgb(74, 75, 75);
-  }
-
-form p {
-    margin-top: 10px;
-  }
-
-form p:first-child {
-    font-weight: bold;
-  }
-  
-
-.photo-credit {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    color: rgb(218, 212, 212);
-    font-size: 15px;
+  margin-top: 20px;
 }
 
-weather-details p {
+form p {
   color: white;
+  font-weight: bold;
+}
+
+form input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: rgb(109, 107, 107);
+  color: #e30404;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: rgb(74, 75, 75);
+}
+
+/* Weather details styles */
+.weather-details p {
+  color: white;
+  font-size: 15px;
+}
+
+/* Photo credit styles */
+.photo-credit {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: rgb(218, 212, 212);
   font-size: 15px;
 }
