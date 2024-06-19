@@ -23,7 +23,7 @@
         <form method="post">
             {% csrf_token %}
             <input type="text" name="city" placeholder="Search a city name..." oninput="this.value = capitalizeFirstLetter(this.value)">
-            <button type="submit"><i> class= "fa fa-search"</i></button>
+            <button type="submit"><i> class= "Search"</i></button>
         </form>
         
         {% if temperature %}
