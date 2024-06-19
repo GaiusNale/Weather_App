@@ -31,7 +31,7 @@ form input[type="text"] {
 form button[type="submit"] {
     padding: 10px 20px;
     background-color: rgb(109, 107, 107);
-    color: #fff;
+    color: #e30404;
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -48,28 +48,6 @@ form p {
 form p:first-child {
     font-weight: bold;
   }
-
-/* Weather container styles */
-.weather-container {
-    margin-top: 50px;
-    background-color: #e8e8e8;
-    padding: 20px;
-    border-radius: 10px;
-  }
-
-.weather-container h2 {
-    color: #bcb8b8;
-  }
-
-.weather-container p {
-    margin-top: 10px;
-    color: #666;
-  }
-
-.weather-container p:first-child {
-    font-weight: bold;
-  }
-
   
 
 .photo-credit {
@@ -78,4 +56,9 @@ form p:first-child {
     right: 10px;
     color: rgb(218, 212, 212);
     font-size: 15px;
+}
+
+weather-details p {
+  color: white;
+  font-size: 15px;
 }

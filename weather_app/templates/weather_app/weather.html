@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 {% load static %}
-<html lang= "en">
+<html lang="en">
 <head>
     <title>Weather App 🌤️</title>
-    <link rel= 'stylesheet' href= '{% static "css/style.css" %}'>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="device-width, initial-scale=1.0">
     <style>
+        /* Inline CSS to dynamically set background image */
         body {
             background-image: url("{{ image_url }}");
         }
     </style>
-    <meta name= "viewport" content= "device-width, initial-scale=1.0">
     <script>
         function capitalizeFirstLetter(string) {
             return string.charAt(0).toUpperCase() + string.slice(1);
@@ -17,26 +18,31 @@
     </script>
 </head>
 <body>
-    <h1>Weather App 🌤️</h1>
-    <form method="post">
-        {% csrf_token %}
-        <p style="color: white;">Enter a city name: <input type="text" id="city" name="city" placeholder="Example: London" oninput="this.value = capitalizeFirstLetter(this.value)"></p>
-        <button type="submit" style="color: white;">Search</button>
-    </form>
-    {% if temperature %}
-    <h2 style="color: white;">Weather in {{ city|capfirst }}</h2>
-    <p style="color: white;">Temperature: {{ temperature }}°C</p>
-    <p style="color: white;">Description: {{ description|capfirst }}</p>
-    <p style="color: white;">Country: {{ country|capfirst }}</p>
-    <p style="color: white;">Humidity: {{ humidity }}%</p>
-    <p style="color: white;">Wind Speed: {{ wind_speed }} m/s</p>
-    <p style="color: white;">Visibility: {{ visibility }}</p>
+    <div class="container">
+        <h1>Weather App 🌤️</h1>
+        <form method="post">
+            {% csrf_token %}
+            <p>Enter a city name: <input type="text" id="city" name="city" placeholder="Example: London" oninput="this.value = capitalizeFirstLetter(this.value)"></p>
+            <button type="submit">Search</button>
+        </form>
+        
+        {% if temperature %}
+        <div class="weather-details">
+            <h2>Weather in {{ city|capfirst }}</h2>
+            <p>Temperature: {{ temperature }}°C</p>
+            <p>Description: {{ description|capfirst }}</p>
+            <p>Country: {{ country|capfirst }}</p>
+            <p>Humidity: {{ humidity }}%</p>
+            <p>Wind Speed: {{ wind_speed }} m/s</p>
+            <p>Visibility: {{ visibility }}</p>
+        </div>
+        {% elif error_message %}
+        <p>{{ error_message|capfirst }}</p>
+        {% endif %}
 
-    <a href= "{{ image_url }}" target= "_blank" class= "photo-credit" >Photo by {{ photographer }} on Unsplash</a>
-    {% elif error_message %}
-    <p style="color: white;">{{ error_message|capfirst }}</p>
-    {% endif %}
+        {% if image_url %}
+        <a href="{{ image_url }}" target="_blank" class="photo-credit">Photo by {{ photographer }} on Unsplash</a>
+        {% endif %}
+    </div>
 </body>
 </html>
-
-
