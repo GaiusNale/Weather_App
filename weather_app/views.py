@@ -15,7 +15,7 @@ def get_weather_data(city):
 def get_unsplash_image(city):
     api_key = unplash_api_key
     base_url = "https://api.unsplash.com/search/photos"
-    params = {'query': f"{city} landscape", 'client_id': api_key, 'per_page': 5, 'orientation': 'landscape'}
+    params = {'query': f"{city} landscape", 'client_id': api_key, 'per_page': 3, 'orientation': 'landscape'}
     response = requests.get(base_url, params=params)
     data = response.json()
     if data['results']:
