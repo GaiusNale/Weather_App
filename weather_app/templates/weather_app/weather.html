@@ -24,7 +24,7 @@
         <h1>Weather App 🌤️</h1>
         <form method="post" class="search-form">
             {% csrf_token %}
-            <p><input type="text" id="city" name="city" placeholder="Example: London" oninput="this.value = capitalizeFirstLetter(this.value)"></p>
+            <p><input type="text" id="city" name="city" placeholder="Search..." oninput="this.value = capitalizeFirstLetter(this.value)"></p>
             <button type="submit"><i class="fas fa-search"></i></button>
         </form>
         

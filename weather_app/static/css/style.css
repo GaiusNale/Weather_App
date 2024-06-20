@@ -11,12 +11,24 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
   }
   
   /* Container styles */
   .container {
-    margin-top: 20px;
     text-align: center;
+    background-color: rgba(0, 0 , 0, 0.8);
+    min-width: 60%;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    border-radius: 10px;
+
   }
   
   /* Heading styles */
@@ -25,8 +37,41 @@ body {
     font-style: italic;
   }
   
-  /* Form styles */
+/* Form styles */
+input {
+  padding:.4rem .8rem;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
 .search-form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+
+button{
+  background: white;
+  padding: .4rem .8rem;
+  height: max-content;
+  width: max-content;
+  border: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+button i {
+  color: grey;
+}
+  /* Form styles */
+/* .search-form {
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -59,7 +104,7 @@ body {
 
 .search-form button[type="submit"]:hover {
     background-color: #898b89;
-}
+} */
 
   /* Weather details styles */
   .weather-details p {
