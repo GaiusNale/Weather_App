@@ -42,9 +42,9 @@
         <p>{{ error_message|capfirst }}</p>
         {% endif %}
 
-        {% if image_url %}
-        <a href="{{ image_url }}" target="_blank" class="photo-credit">Photo by {{ photographer }} on Unsplash</a>
-        {% endif %}
     </div>
+    {% if image_url %}
+    <a href="{{ image_url }}" target="_blank" class="photo-credit">Photo by {{ photographer }} on Unsplash</a>
+    {% endif %}
 </body>
 </html>
