@@ -6,7 +6,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: rgb(47, 78, 88);
+    background-color: rgba(216, 216, 216, 0.778);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -22,9 +22,9 @@ body {
   /* Container styles */
   .container {
     text-align: center;
-    background-color: rgba(0, 0 , 0, 0.8);
-    min-width: 60%;
-    max-width: 80%;
+    background-color: rgba(0, 0, 0, 0.482);
+    min-width: 30%;
+    max-width: 50%;
     margin: 0 auto;
     padding: 2rem 0;
     border-radius: 10px;
