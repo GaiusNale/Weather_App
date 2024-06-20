@@ -1,40 +1,79 @@
 /* 
-* Styles for the body 
-*/
+ * Stylesheet for the weather app
+ */
 
+/* Body styles */
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: rgb(47, 78, 88);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white
-}
-
-/* 
-* Styles for the container 
-*/
-
-.container {
-    margin-top: 50px;
+    font-family: Arial, sans-serif;
     text-align: center;
-}
-
-/* Styles for the header */
-h1 {
-    color: grey;
+    background-color: rgb(47, 78, 88);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+  }
+  
+  /* Container styles */
+  .container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Heading styles */
+  h1 {
+    color: #a2a2a2;
     font-style: italic;
+  }
+  
+  /* Form styles */
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-/* Styles for the form */
-
-form {
-    margin-top: 30px;
-}
-
-form input [type= 'text' ]{
-    padding: 10px 20px;
+.search-form input[type="text"] {
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 20px 0 0 20px;
+    background-color: #b8b8b8;
+    width: 250px;
+    font-size: 16px;
+    outline: none;
 }
+
+.search-form button[type="submit"] {
+    padding: 10px 10px;
+    background-color: #b8bcb8;
+    color: white;
+    border: 1px solid #b8bcb8;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    font-size: 16px;
+    width: 0;
+    outline: none;
+}
+
+.search-form button[type="submit"] i {
+    margin: 0;
+}
+
+.search-form button[type="submit"]:hover {
+    background-color: #898b89;
+}
+
+  /* Weather details styles */
+  .weather-details p {
+    color: white;
+    font-size: 15px;
+  }
+  
+  /* Photo credit styles */
+  .photo-credit {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: rgb(218, 212, 212);
+    font-size: 15px;
+  }
+  
