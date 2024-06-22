@@ -1,6 +1,4 @@
 import requests
-import country_converter as cocov
-import countryflag
 from django.shortcuts import render
 from .forms import WeatherForm
 from .keysus import keysus
@@ -51,7 +49,6 @@ def weather(request):
                 visibility = weather_data.get('visibility', 'N/A') # Get the visibility from the weather data
                 country = weather_data['sys']['country']
                 
-                country_name= cocov.convert(names=country, to='name_short')
 
                 # Assign emojis to certain weather conditions
                 emoji = {
