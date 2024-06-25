@@ -56,7 +56,10 @@ def weather(request):
                     "few clouds": "⛅️",
                     "scattered clouds": "☁️",
                     "broken clouds": "☁️☁️  ",
+                    "overcast clouds": "☁️☁️☁️",
                     "light rain": "🌧️",
+                    "moderate rain": "🌧️🌧️",
+                    "heavy rain": "🌧️🌧️🌧️",
                     "rain": "🌧️",
                     "thunderstorm": "⛈️",
                     "snow": "❄️",
@@ -64,7 +67,7 @@ def weather(request):
                 }
                 
                 # Get the emoji for the weather description
-                description_emoji = emoji.get(description.lower(), "❓")
+                description_emoji = emoji.get(description.lower(), " ")
 
                 context = {'temperature': temperature,
                             'description': f"{description} {description_emoji}", 
