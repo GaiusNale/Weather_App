@@ -59,7 +59,7 @@ def weather(request):
                     "overcast clouds": "☁️☁️☁️",
                     "light rain": "🌧️",
                     "moderate rain": "🌧️🌧️",
-                    "heavy rain": "🌧️🌧️🌧️",
+                    "heavy rain": "🌧️🌧️",
                     "rain": "🌧️",
                     "thunderstorm": "⛈️",
                     "snow": "❄️",
@@ -79,7 +79,7 @@ def weather(request):
                             'image_url': image_url,
                             'photographer': photographer} # Create the context dictionary
             else:
-                context = {'error_message': 'City not found'} # If the city is not found, create an error message
+                context = {'error_message': 'City not found. Maybe check your spelling?'} # If the city is not found, create an error message
 
             # Render the weather.html template with the context
             return render(request, 'weather_app/weather.html', context)
