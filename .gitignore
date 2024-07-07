@@ -8,9 +8,9 @@ __pycache__/
 # Django
 *.sqlite3
 db.sqlite3
-settings.py
 manage.py
 keysus.py 
+keysus2.py
 old_things.txt
 
 # IDEs
