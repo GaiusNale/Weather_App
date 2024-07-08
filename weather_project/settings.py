@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# SECURITY WARNING: keep the secret key used in production secret!!! (it finally works)
 SECRET_KEY = os.getenv("SECRETKEY1")
 UNPLASH_KEY = os.getenv('UNPLASH_KEY')
 OPENAPI = os.getenv('OPENAPI')
