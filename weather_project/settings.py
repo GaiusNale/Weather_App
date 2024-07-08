@@ -27,7 +27,11 @@ OPENAPI = os.getenv('OPENAPI')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://weather-app-5ip9.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "weather-app-5ip9.onrender.com",
+]
 
 
 # Application definition
