@@ -1,11 +1,13 @@
-import requests
+import requests 
+import os
 from django.shortcuts import render
 from .forms import WeatherForm
-from .keysus import keysus
-from .keysus import unplash_api_key
+from dotenv import load_dotenv, dotenv_values
+
+load_dotenv()
 
 def get_weather_data(city):
-    api_key = keysus
+    api_key = os.getenv('OPENAPI')
     base_url = 'http://api.openweathermap.org/data/2.5/weather'
     params = {'q': city, 'appid': api_key, 'units': 'metric'}
     response = requests.get(base_url, params=params)
@@ -13,7 +15,7 @@ def get_weather_data(city):
     return data
 
 def get_unsplash_image(city):
-    api_key = unplash_api_key
+    api_key = os.getenv('UNSPLASH_KEY')
     base_url = "https://api.unsplash.com/search/photos"
     params = {'query': f"{city} landscape", 'client_id': api_key, 'per_page': 3, 'orientation': 'landscape'}
     response = requests.get(base_url, params=params)
