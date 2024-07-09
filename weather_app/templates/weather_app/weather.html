@@ -3,13 +3,96 @@
 <html lang="en">
 <head>
     <title>Weather App 🌤️</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <meta name="viewport" content="device-width, initial-scale=1.0">
     <style>
         body {
             background-image: url("{{ image_url }}");
+        }
+        /* Stylesheet for the weather app */
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.778);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Container styles */
+        .container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.482);
+            min-width: 30%;
+            max-width: 50%;
+            margin: 0 auto;
+            padding: 2rem 0;
+            border-radius: 10px;
+            transform: translateY(-100px);
+        }
+
+        /* Heading styles */
+        h1 {
+            color: #f5efef;
+            font-weight: bold;
+        }
+
+        /* Form styles */
+        input {
+            padding: .4rem .8rem;
+            border: none;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .search-form {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            background: white;
+            padding: .4rem .8rem;
+            height: max-content;
+            width: max-content;
+            border: 0;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        button i {
+            color: rgba(49, 49, 49, 0.463);
+        }
+
+        /* Weather details styles */
+        .weather-details p {
+            color: white;
+            font-size: 15px;
+        }
+
+        /* Photo credit styles */
+        .photo-credit {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            color: rgb(218, 212, 212);
+            font-size: 15px;
         }
     </style>
     <script>
@@ -23,7 +106,9 @@
         <h1>Weather App 🌤️</h1>
         <form method="post" class="search-form">
             {% csrf_token %}
-            <p><input type="text" id="city" name="city" placeholder="Search..." oninput="this.value = capitalizeFirstLetter(this.value)"></p>
+            <p>
+                <input type="text" id="city" name="city" placeholder="Search..." oninput="this.value = capitalizeFirstLetter(this.value)">
+            </p>
             <button type="submit"><i class="fas fa-search"></i></button>
         </form>
         
@@ -40,11 +125,9 @@
         {% elif error_message %}
         <p>{{ error_message|capfirst }}</p>
         {% endif %}
-
     </div>
     {% if image_url %}
     <a href="{{ image_url }}" target="_blank" class="photo-credit">Photo by {{ photographer }} on Unsplash</a>
     {% endif %}
 </body>
 </html>
-
