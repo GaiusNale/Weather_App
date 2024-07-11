@@ -5,7 +5,7 @@ Nimbus is a web application that provides real-time weather information for any 
 
 ## Features
 - **City Search:** Allows users to search for the current weather in any city.
-- **Weather Details:** Displays temperature, weather description, humidity, wind speed, and visibility.
+- **Weather Details:** Displays temperature, weather description, humidity, wind speed,visibility and the country the city is located in.
 - **Background Image:** Dynamically changes the background image based on the current queried city.
 - **Mobile Optimization:** The app is optimized for mobile devices.
 
@@ -29,7 +29,7 @@ You can access the live demo of the Weather App [here](https://weather-app-5ip9.
 2. Create a virtual environment and activate it:
     ```bash
     python -m venv venv
-    source venv/bin/activate   # On Windows use `venv\Scripts\activate`
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
     ```
 
 3. Install the required dependencies:
