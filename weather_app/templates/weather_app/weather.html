@@ -96,6 +96,50 @@
             color: rgb(218, 212, 212);
             font-size: 15px;
         }
+
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+          
+            .container {
+                width: 100%;
+                padding: 1rem 0;
+                transform: translateY(-52px);
+            }
+          
+            h1 {
+                font-size: 1.5rem;
+            }
+          
+            input, button {
+                padding: 0.3rem 0.5rem;
+                font-size: 0.9rem;
+            }
+          
+            .search-form {
+                flex-direction: column;
+                width: 100%;
+            }
+          
+            input {
+                border-radius: 10px;
+                margin-bottom: 0.5rem;
+            }
+          
+            button {
+                border-radius: 10px;
+            }
+          
+            .weather-details p {
+                font-size: 1.2rem;
+            }
+          
+            .photo-credit {
+                font-size: 0.9rem;
+            }
+          }
+          
     </style>
     <script>
         function capitalizeFirstLetter(string) {
