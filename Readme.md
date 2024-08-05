@@ -5,7 +5,7 @@ Nimbus is a web application that provides real-time weather information for any 
 
 ## Features
 - **City Search:** Allows users to search for the current weather in any city.
-- **Weather Details:** Displays temperature, weather description, humidity, wind speed,visibility and the country the city is located in.
+- **Weather Details:** Displays temperature, weather description, humidity, wind speed, visibility and the country the city is located in.
 - **Background Image:** Dynamically changes the background image based on the current queried city.
 - **Mobile Optimization:** The app is optimized for mobile devices.
 
@@ -38,7 +38,7 @@ You can access the live demo of the Weather App [here](https://weather-app-5ip9.
     ```
 
 4. Set up environment variables:
-    Create a `.env` file in the root directory of the project and add the following variables:
+    Create a `.env` file in the root directory of the project and add the following variables, this may also be done locally:
     ```env
     SECRET_KEY=your_secret_key
     UNPLASH_KEY=your_unsplash_api_key
